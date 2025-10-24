@@ -17,9 +17,10 @@ function e($s) {
     return htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 
-// Crear guest_name si no hay sesión de usuario
+
 if (!isset($_SESSION['user_id']) && !isset($_SESSION['guest_name'])) {
     $_SESSION['guest_name'] = 'Guest-' . random_int(1000, 9999);
 }
 ?>
+
 
